@@ -10,9 +10,17 @@
   }
 
   body {
-    @apply bg-slate-950 text-slate-100 antialiased selection:bg-amber-500/30 selection:text-amber-200;
+    background-color: #020617; /* fallback close to slate-950 */
+    color: #f1f5f9; /* close to slate-100 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
     overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(245,158,11,0.3); /* amber-500/30 */
+    color: #fde68a; /* amber-200 */
   }
 }
 
